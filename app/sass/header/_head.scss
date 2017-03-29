@@ -12,6 +12,10 @@
     margin-top: 25px;
     margin-bottom: 27px;
     transform: skew(-13deg);
+    @include breakpoint(max-width 670px){
+      width: 100%;
+      text-align: center;
+    }
     span:first-of-type{
       display: block;
       position: relative;
@@ -41,6 +45,11 @@
     float: right;
     width: 398px;
     margin-top: 35px;
+    @include breakpoint(max-width 670px){
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
   }
   &__enter{
     display: block;
@@ -56,6 +65,10 @@
     font-family: $RobotoRegular;
     font-size: 14px;
     line-height: 28px;
+    @include breakpoint(max-width 670px){
+      width: 238px;
+      margin-bottom: 30px;
+    }
     &:hover{
       color: #ffffff;
       background: -webkit-gradient(linear,left top,left bottom,from(#33aafe),to(#334a51));
@@ -77,6 +90,10 @@
     font-family: $RobotoRegular;
     font-size: 14px;
     line-height: 28px;
+    @include breakpoint(max-width 670px){
+      width: 238px;
+      margin-bottom: 30px;
+    }
     &:hover{
       color: #ffffff;
       background: -webkit-gradient(linear,left top,left bottom,from(#33aafe),to(#334a51));
