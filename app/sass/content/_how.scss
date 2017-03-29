@@ -1,0 +1,78 @@
+.how{
+  background-color: #fff;
+  &__box{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-around);
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 55px;
+    @include breakpoint(max-width 670px){
+      @include flex-direction(column);
+    }
+  }
+  &__item{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(column);
+    @include align-items(center);
+    position: relative;
+    float: left;
+    width: 340px;
+    height: 335px;
+    border-radius: 20px;
+    border: 5px solid #33aafe;
+    margin-right: 0;
+    margin-bottom: 62px;
+    transform: skew(-13deg);
+    box-shadow: -14px 12px 25px -9px #000000;
+    @include breakpoint(max-width 670px){
+      width: 100%;
+      height: 268px;
+      transform: skew(0deg);
+      box-shadow: -1px 18px 25px -9px #000000;
+    }
+    p{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin: 0;
+      transform: skew(13deg);
+      text-align: center;
+      @include breakpoint(max-width 670px){
+        transform: skew(0deg);
+      }
+      &:first-of-type{
+        color: #202020;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        font-family: $RobotoBold;
+        font-size: 20px;
+      }
+      &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4){
+        margin-bottom: 20px;
+        color: #727070;
+        font-family: $RobotoBold;
+        font-size: 14px;
+        @include breakpoint(max-width 670px){
+          font-size: 18px;
+        }
+      }
+      &:nth-of-type(2), &:nth-of-type(3){
+        &:after{
+          display: block;
+          position: absolute;
+          content: '';
+          width: 134px;
+          height: 2px;
+          background-color: #33aafe;
+          bottom: -12px;
+          left: calc(50% - (134px/2));
+        }
+      }
+    }
+  }
+}
