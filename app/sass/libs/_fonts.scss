@@ -1,5 +1,36 @@
-//@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
-//@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i');
-//@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-//@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
-//@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+$RobotoLight: 'Roboto Light';
+$RobotoRegular: 'Roboto Regular';
+$RobotoMedium: 'Roboto Medium';
+$RobotoBold: 'Roboto Bold';
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('../fonts/Roboto/RobotoLight.eot') format('embedded-opentype'),
+  url('../fonts/Roboto/RobotoLight.woff2') format('woff2'),
+  url('../fonts/Roboto/RobotoLight.woff') format('woff'),
+  url('../fonts/Roboto/RobotoLight.ttf') format('truetype'),
+  url('../fonts/Roboto/RobotoLight.svg') format('svg');
+}
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('../fonts/Roboto/RobotoRegular.eot') format('embedded-opentype'),
+  url('../fonts/Roboto/RobotoRegular.woff2') format('woff2'),
+  url('../fonts/Roboto/RobotoRegular.woff') format('woff'),
+  url('../fonts/Roboto/RobotoRegular.ttf') format('truetype'),
+  url('../fonts/Roboto/RobotoRegular.svg') format('svg');
+}
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url('../fonts/Roboto/RobotoMedium.eot') format('embedded-opentype'),
+  url('../fonts/Roboto/RobotoMedium.woff2') format('woff2'),
+  url('../fonts/Roboto/RobotoMedium.woff') format('woff'),
+  url('../fonts/Roboto/RobotoMedium.ttf') format('truetype'),
+  url('../fonts/Roboto/RobotoMedium.svg') format('svg');
+}
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url('../fonts/Roboto/RobotoBold.eot') format('embedded-opentype'),
+  url('../fonts/Roboto/RobotoBold.woff2') format('woff2'),
+  url('../fonts/Roboto/RobotoBold.woff') format('woff'),
+  url('../fonts/Roboto/RobotoBold.ttf') format('truetype'),
+  url('../fonts/Roboto/RobotoBold.svg') format('svg');
+}

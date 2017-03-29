@@ -1,0 +1,27 @@
+.main-banner{
+  background-image: url('../img/top-banner-bg.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-color: #0000FF;
+  &__title{
+    display: block;
+    position: relative;
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+    color: #ffffff;
+    font-family: $RobotoBold;
+    font-size: 50px;
+    margin-top: 40px;
+    margin-bottom: 65px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    @include box-sizing(border-box);
+    background-color: rgba(1,1,1,0.2);
+    border-radius: 5px;
+  }
+}
