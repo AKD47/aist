@@ -1,6 +1,6 @@
-.top-customer{
+.top-courier{
   background-color: #141414;
-  background-image: url('../img/top-customer-bg.png');
+  background-image: url('../img/top-curier-bg.png');
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -60,10 +60,10 @@
     width: 100%;
     height: 288px;
     &:hover{
-      .top-customer__item--img{
+      .top-courier__item--img{
         box-shadow: 0 0 15px rgba(51, 170, 254, 0.9);
       }
-      .top-customer__item--name p{
+      .top-courier__item--name p{
         color: #33aafe;
       }
     }

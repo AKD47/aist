@@ -14,12 +14,14 @@ $(document).ready(function () {
             menu.slideDown('fast');
         }
     });
-    $(document).on('click', function (e) {
-        if ($(e.target).closest('.header__navigation').length != 1) {
-            $('.header__nav').slideUp('fast');
-            $('#burger').removeClass('show');
-        }
-    });
+    if(window.innerWidth < 670){
+        $(document).on('click', function (e) {
+            if ($(e.target).closest('.header__navigation').length != 1) {
+                $('.header__nav').slideUp('fast');
+                $('#burger').removeClass('show');
+            }
+        });
+    }     
     /*close header mobile menu*/
 
     /*top-customer slider*/
@@ -40,4 +42,23 @@ $(document).ready(function () {
         }
     });
     /*close top-customer slider*/
+
+    /*top-courier slider*/
+    $('#top-courier-slider').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    });
+    /*close top-courier slider*/
 });
