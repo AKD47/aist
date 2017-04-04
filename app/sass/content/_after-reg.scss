@@ -1,0 +1,65 @@
+.after-reg{
+  background-color: #fff;
+  &__subtitle{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #202020;
+    font-family: $RobotoMedium;
+    font-size: 18px;
+  }
+  &__links{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-around);
+    position: relative;
+    float: left;
+    width: 600px;
+    margin-left: calc(50% - (600px/2));
+    padding: 30px 10px;
+    @include box-sizing(border-box);
+    background-color: #f6f5f5;
+    margin-bottom: 100px;
+    @include breakpoint(max-width 598px) {
+      width: 300px;
+      margin-left: calc(50% - (300px/2));
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+      margin-bottom: 30px;
+    }
+  }
+  &__link{
+    position: relative;
+    float: left;
+    width: 160px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,.16);
+    background-color: #33aafe;
+    text-align: center;
+    color: #fff;
+    font-family: $RobotoRegular;
+    font-size: 14px;
+    line-height: 28px;
+    @include breakpoint(max-width 598px) {
+      width: 150px;
+    }
+    &:hover{
+      color: #fff;
+      background: -webkit-gradient(linear,left top,left bottom,from(#33aafe),to(#334a51));
+      background: -webkit-linear-gradient(#33aafe,#334a51);
+      background: linear-gradient(#33aafe,#334a51);
+    }
+  }
+  &__link:last-of-type{
+    @include breakpoint(max-width 598px) {
+      margin-top: 30px;
+    }
+  }
+}
