@@ -61,4 +61,63 @@ $(document).ready(function () {
         }
     });
     /*close top-courier slider*/
+
+    /*show single proposal map*/
+    $(document).on('click', '#single-item-showmap', function (event) {
+       event.preventDefault();
+       var mapBlock = $(this).next('.single__item--map'),
+            map = new Map();
+        if(mapBlock.hasClass('open')){
+            mapBlock.removeClass('open').slideUp('500');
+        } else{
+            mapBlock.addClass('open').slideDown('500', function () {
+                $('#map').empty();
+                map.init({
+                    selector: '#map',
+                    center: $('.concreate-adress').html(),
+                    zoom: 10,
+                    placemarks: [
+                        {
+                            address: $(".concreate-adress").html(),
+                            options: [
+                                {key: 'draggable', value: false},
+                                {key: 'iconLayout', value: 'default#image'},
+                                {key: 'iconImageHref', value: 'img/icons/map-marker-icon.png'}
+                            ],
+                            properties: [
+                                {key: 'balloonContentHeader', value: $('.map-placemarks-title').html()}
+                            ]
+                        }
+                    ]
+                });
+            });           
+        }
+    });
+    /*close single proposal map*/
+   
 });
+
+/*single proposal map*/
+
+    /*var map = new Map();
+    map.init({
+        selector: '#map',
+        center: $('.concreate-adress').html(),
+        zoom: 10,
+        placemarks: [
+            {
+                address: $(".concreate-adress").html(),
+                options: [
+                    {key: 'draggable', value: false},
+                    {key: 'iconLayout', value: 'default#image'},
+                    {key: 'iconImageHref', value: 'img/icons/map-marker-icon.png'}
+                ],
+                properties: [
+                    {key: 'balloonContentHeader', value: $('.map-placemarks-title').html()}
+                ]
+            }
+        ]
+    });*/
+
+/*close single proposal map*/
+

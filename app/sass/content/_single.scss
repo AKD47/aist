@@ -1,0 +1,128 @@
+.single{
+  background-color: #fff;
+  &__item{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 52px;
+    background-color: #f6f5f5;
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    @include box-sizing(border-box);
+    h3{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      text-align: center;
+      color: black;
+      font-family: $RobotoMedium;
+      font-size: 18px;
+    }
+    &--descr{
+      display: block;
+      position: relative;
+      float: left;
+      width: 450px;
+      h3{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        text-align: left;
+        color: #202020;
+        font-family: $RobotoLight;
+        font-size: 18px;
+      }
+      p{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 10px 0;
+        background-color: white;
+        border-radius: 5px;
+        border: 1px solid #e0dfde;
+        box-shadow: 0 0 0 rgba(168, 168, 165, 0.28);
+        color: #575656;
+        font-family: $RobotoLight;
+        font-size: 14px;
+        font-weight: 300;
+        padding: 5px;
+        @include box-sizing(border-box);
+      }
+    }
+    &--element{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #848484;
+      font-family: $RobotoLight;
+      font-size: 16px;
+      span{
+        color: black;
+        margin-left: 20px;
+      }
+    }
+    &--more{
+      display: block;
+      position: relative;
+      float: left;
+      margin-top: 14px;
+      margin-bottom: 14px;
+      padding-left: 30px;
+      @include box-sizing(border-box);
+      text-decoration: underline;
+      color: #277dff;
+      font-family: $RobotoLight;
+      font-size: 12px;
+      font-weight: 300;
+      &:hover {
+        color: #33aafe;
+        text-decoration: none;
+      }
+      &:before{
+        display: block;
+        position: absolute;
+        content: '';
+        top: -3px;
+        left: 0;
+        width: 16px;
+        height: 21px;
+        background-image: url('../img/icons/map-marker-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+    }
+    &--map{
+      display: none;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 336px;
+      margin-bottom: 50px;
+      #map{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  &__icon{
+    display: block;
+    position: relative;
+    float: left;
+    width: 128px;
+    text-align: center;
+  }
+}
