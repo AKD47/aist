@@ -56,6 +56,18 @@
         @include box-sizing(border-box);
       }
     }
+    &--subtitle{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 15px;
+      padding-left: 6px;
+      @include box-sizing(border-box);
+      color: #277dff;
+      font-family: $RobotoLight;
+      font-size: 14px;
+    }
     &--element{
       display: block;
       position: relative;
@@ -68,6 +80,18 @@
         color: black;
         margin-left: 20px;
       }
+      &:last-of-type{
+        font-family: $RobotoBold;
+      }
+    }
+    &--date{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #202020;
+      font-family: $RobotoLight;
+      font-size: 14px;
     }
     &--more{
       display: block;
@@ -81,7 +105,6 @@
       color: #277dff;
       font-family: $RobotoLight;
       font-size: 12px;
-      font-weight: 300;
       &:hover {
         color: #33aafe;
         text-decoration: none;
@@ -117,6 +140,67 @@
         padding: 0;
       }
     }
+    &--statuses{
+      display: block;
+      position: relative;
+      float: left;
+      width: 290px;
+      padding-left: 64px;
+      padding-right: 30px;
+      @include box-sizing(border-box);
+    }
+    &--offer-price{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      font-family: $RobotoLight;
+      color: #565656;
+      font-size: 18px;
+      span{
+        color: black;
+        font-family: $RobotoBold;
+        font-size: 20px;
+      }
+    }
+    &--tool{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      text-align: center;
+      border-radius: 20px;
+      border: 2px solid #80ca24;
+      font-family: $RobotoMedium;
+      color: #80ca24;
+      text-align: center;
+      margin: 5px 0;
+      padding: 5px 0;
+      @include box-sizing(border-box);
+      &:hover{
+        border: 2px solid #33aafe;
+        color: #33aafe;
+      }
+    }
+    &--vip-tool{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      text-align: center;
+      border-radius: 20px;
+      border: 2px solid #eba600;
+      font-family: $RobotoMedium;
+      color: #eba600;
+      text-align: center;
+      margin: 5px 0;
+      padding: 5px 0;
+      @include box-sizing(border-box);
+      &:hover{
+        border: 2px solid #33aafe;
+        color: #33aafe;
+      }
+    }
   }
   &__icon{
     display: block;
@@ -124,5 +208,27 @@
     float: left;
     width: 128px;
     text-align: center;
+  }
+  &__responses{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    h3{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-family: $RobotoLight;
+      font-size: 14px;
+      font-weight: 300;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 10px 0;
+      @include box-sizing(border-box);
+      background-color: #33aafe;
+    }
   }
 }
