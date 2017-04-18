@@ -171,6 +171,22 @@
         padding: 0;
       }
     }
+    &--response{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - (128px + 450px + 290px));
+      padding: 0;
+      @include breakpoint(max-width 1024px){
+        width: 290px;
+        padding-left: 64px;
+        padding-right: 30px;
+      }
+      @include breakpoint(max-width 600px){
+        width: 100%;
+        padding: 0;
+      }
+    }
     &--offer-price{
       display: block;
       position: relative;
