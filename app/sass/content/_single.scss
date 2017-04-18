@@ -269,6 +269,96 @@
       display: none;
     }
   }
+  &__resp-form{
+    display: block;
+    position: relative;
+    float: left;
+    width: 586px;
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include box-sizing(border-box);
+    background-color: #f6f4f5;
+    &--title{
+      display: block;
+      position: relative;
+      float: left;
+      width: 162px;
+      color: #848484;
+      font-family: $RobotoMedium;
+      font-size: 16px;
+      &:after{
+        display: block;
+        position: absolute;
+        content: '*';
+        top: -4px;
+        left: -10px;
+        color: #e91818;
+      }
+    }
+    &--field{
+      display: block;
+      position: relative;
+      float: left;
+      width: 220px;
+      height: 26px;
+      margin-bottom: 10px;
+      background-color: #fff;
+      border: 1px solid #dfdfdf;
+      border-radius: 5px;
+      padding: 0 5px;
+      @include box-sizing(border-box);
+      color: #575656;
+      font-family: $RobotoLight;
+      font-size: 14px;
+    }
+    &--text{
+      display: block;
+      position: relative;
+      float: left;
+      width: 360px;
+      height: 90px;
+      margin-bottom: 10px;
+      resize: none;
+      background-color: #fff;
+      border: 1px solid #dfdfdf;
+      border-radius: 5px;
+      padding: 0 5px;
+      @include box-sizing(border-box);
+      color: #575656;
+      font-family: $RobotoLight;
+      font-size: 14px;
+    }
+    &--submit{
+      display: block;
+      position: relative;
+      float: right;
+      width: 194px;
+      text-align: center;
+      border-radius: 20px;
+      background-color: #fff;
+      border: 2px solid #80ca24;
+      font-family: $RobotoMedium;
+      color: #80ca24;
+      text-align: center;
+      margin: 5px 0;
+      padding: 5px 0;
+      @include box-sizing(border-box);
+      &:hover{
+        border: 2px solid #33aafe;
+        color: #33aafe;
+      }
+    }
+    &--notification{
+      display: block;
+      position: relative;
+      float: left;
+      width: 290px;
+      background-color: #fff;
+    }
+  }
   &__responses{
     display: block;
     position: relative;
