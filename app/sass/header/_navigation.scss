@@ -17,6 +17,9 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  @include breakpoint(max-width 1024px) {
+    @include align-items(center);
+  }
   @include breakpoint(max-width 670px) {
     display: none;
     @include flex-direction(column);

@@ -11,6 +11,9 @@
     padding-left: 30px;
     padding-right: 30px;
     @include box-sizing(border-box);
+    @include breakpoint(max-width 600px){
+      margin-top: 0;
+    }
     h3{
       display: block;
       position: relative;
@@ -22,12 +25,21 @@
       color: black;
       font-family: $RobotoMedium;
       font-size: 18px;
+      @include breakpoint(max-width 600px){
+        text-align: left;
+      }
     }
     &--descr{
       display: block;
       position: relative;
       float: left;
       width: 450px;
+      @include breakpoint(max-width 1024px){
+        width: calc(100% - (128px + 290px));
+      }
+      @include breakpoint(max-width 670px){
+        width: 100%;
+      }
       h3{
         display: block;
         position: relative;
@@ -55,6 +67,12 @@
         padding: 5px;
         @include box-sizing(border-box);
       }
+    }
+    &--box{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
     }
     &--subtitle{
       display: block;
@@ -148,6 +166,10 @@
       padding-left: 64px;
       padding-right: 30px;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 670px){
+        width: 100%;
+        padding: 0;
+      }
     }
     &--offer-price{
       display: block;
@@ -201,6 +223,25 @@
         color: #33aafe;
       }
     }
+    &--err-tool{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      text-align: center;
+      border-radius: 20px;
+      border: 2px solid #e91818;
+      font-family: $RobotoMedium;
+      color: #e91818;
+      text-align: center;
+      margin: 5px 0;
+      padding: 5px 0;
+      @include box-sizing(border-box);
+      &:hover{
+        border: 2px solid #e91818;
+        color: #e91818;
+      }
+    }
   }
   &__icon{
     display: block;
@@ -208,6 +249,9 @@
     float: left;
     width: 128px;
     text-align: center;
+    @include breakpoint(max-width 600px){
+      display: none;
+    }
   }
   &__responses{
     display: block;
@@ -224,11 +268,85 @@
       font-family: $RobotoLight;
       font-size: 14px;
       font-weight: 300;
-      margin-top: 10px;
+      margin-top: 25px;
       margin-bottom: 10px;
       padding: 10px 0;
       @include box-sizing(border-box);
       background-color: #33aafe;
+    }
+    &--item{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin: 18px 0;
+      background-color: #f6f5f5;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      @include box-sizing(border-box);
+    }
+    &--avatar{
+      display: block;
+      position: relative;
+      float: left;
+      width: 130px;
+      @include breakpoint(max-width 600px){
+        width: 100%;
+      }
+      p{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+        color: #33aafe;
+        font-family: $RobotoLight;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+    }
+    &--img{
+      display: block;
+      position: relative;
+      float: left;
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-left: calc(50% - (66px/2));
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &--descr{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - (130px + 290px));
+      @include breakpoint(max-width 600px){
+        width: 100%;
+      }
+      p{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 10px 0;
+        background-color: #fff;
+        border-radius: 5px;
+        border: 1px solid #e0dfde;
+        box-shadow: 0 0 0 hsla(60,2%,65%,.28);
+        color: #575656;
+        font-size: 14px;
+        font-weight: 300;
+        padding: 5px;
+        @include box-sizing(border-box);
+      }
     }
   }
 }
