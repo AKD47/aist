@@ -357,7 +357,28 @@
       position: relative;
       float: left;
       width: 290px;
+      margin-top: 20px;
+      padding: 0 30px;
+      @include box-sizing(border-box);
       background-color: #fff;
+      h3{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #000;
+        font-family: $RobotoMedium;
+        font-size: 18px;
+      }
+      ol{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+      }
+
     }
   }
   &__responses{
