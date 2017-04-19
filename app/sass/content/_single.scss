@@ -29,6 +29,59 @@
         text-align: left;
       }
     }
+    &--slider{
+      display: block;
+      position: relative;
+      float: left;
+      width: 300px;
+    }
+    &--carousel{
+      display: block;
+      position: relative;
+      float: left;
+      width: 300px;
+      /*height: 200px;*/
+      padding-right: 20px;
+      @include box-sizing(border-box);
+      .owl-dots{
+        display: block;
+        position: relative;
+        float: left;
+      }
+    }
+    &--slide{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &--nav{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+     /* display: block;*/
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 50px;
+      margin-top: 10px;
+      padding-right: 20px;
+      padding-right: 20px;
+      @include box-sizing(border-box);
+      .single__item--slide{
+        width: 50px;
+        height: 50px;
+        margin: 0 10px;
+      }
+    }
     &--descr{
       display: block;
       position: relative;

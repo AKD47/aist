@@ -94,7 +94,26 @@ $(document).ready(function () {
         }
     });
     /*close single proposal map*/
-   
+
+    /*single proposal slider*/
+    $('.single__item--carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.single__item--nav'
+    });
+    $('.single__item--nav').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        asNavFor: '.single__item--carousel',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true
+    });
+    
+    /*close single proposal slider*/
+
 });
 
 /*single proposal map*/
