@@ -122,10 +122,36 @@ $(document).ready(function () {
         centerMode: true,
         focusOnSelect: true
     });
-    
     /*close single proposal slider*/
 
+    /*proposals filter fixed*/
+    var filter = $('#prop-filter');
+    if (filter.length > 0) {
+        var stockElementPosition = filter.offset().top;
+        $(window).scroll(function () {
+            fixedScroll(filter, stockElementPosition, $('.footer'));
+        });
+    }
+    /*close proposals filter fixed*/
+
 });
+
+function fixedScroll(element, elementPosition, blockElement) {//функция фиксированногоблока, с селекторами элемента, его позиционирования и преграждающего блока
+    var top = $(document).scrollTop(),
+        blockingElement = blockElement.offset().top,
+        height = element.outerHeight();//высота элемента, включающая внутренние и внешние отступы
+    if (window.innerWidth > 770) {
+        if (top > elementPosition && top < blockingElement - height) {
+            element.addClass('fixed').removeAttr("style");
+        }
+        else if (top > blockingElement - height) {
+            element.removeClass('fixed').css({'position': 'absolute', 'bottom': '50px', 'right': '0'});
+        }
+        else {
+            element.removeClass('fixed');
+        }
+    }
+}
 
 /*single proposal map*/
 
