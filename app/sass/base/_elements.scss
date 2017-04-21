@@ -78,19 +78,19 @@ section {
       position: relative;
       float: left;
       @include breakpoint(max-width 600px){
-        width: 100%;
+        /*width: 100%;*/
       }
       &:after{
         display: block;
         position: absolute;
-        content: '>';
+        content: '/';
         top: 4px;
         right: -5px;
         font-family: $RobotoLight;
         color: #33aafe;
         font-size: 20px;
         @include breakpoint(max-width 600px){
-         display: none;
+         /*display: none;*/
         }
       }
       a{
@@ -115,7 +115,7 @@ section {
       padding: 10px 15px;
       @include box-sizing(border-box);
       color: #33aafe;
-      font-family: $RobotoBold;
+      font-family: $RobotoLight;
       font-size: 14px;
       text-decoration: none;
       &:after{
