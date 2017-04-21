@@ -77,6 +77,9 @@ section {
       display: block;
       position: relative;
       float: left;
+      @include breakpoint(max-width 600px){
+        width: 100%;
+      }
       &:after{
         display: block;
         position: absolute;
@@ -86,6 +89,9 @@ section {
         font-family: $RobotoLight;
         color: #33aafe;
         font-size: 20px;
+        @include breakpoint(max-width 600px){
+         display: none;
+        }
       }
       a{
         display: block;

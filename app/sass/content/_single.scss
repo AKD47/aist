@@ -14,7 +14,7 @@
     @include breakpoint(max-width 600px){
       margin-top: 0;
     }
-    h3{
+    > h3{
       display: block;
       position: relative;
       float: left;
@@ -34,15 +34,20 @@
       position: relative;
       float: left;
       width: 300px;
+      @include breakpoint(max-width 600px){
+        width: 100%;
+      }
     }
     &--carousel{
       display: block;
       position: relative;
       float: left;
       width: 300px;
-      /*height: 200px;*/
       padding-right: 20px;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 600px){
+        width: 100%;
+      }
       .owl-dots{
         display: block;
         position: relative;
@@ -88,9 +93,12 @@
       float: left;
       width: 450px;
       @include breakpoint(max-width 1024px){
-        width: calc(100% - (128px + 290px));
+        width: calc(100% - (300px + 290px));
       }
-      @include breakpoint(max-width 670px){
+      @include breakpoint(max-width 770px){
+        width: calc(100% - 300px);
+      }
+      @include breakpoint(max-width 600px){
         width: 100%;
       }
       h3{
@@ -219,7 +227,12 @@
       padding-left: 64px;
       padding-right: 30px;
       @include box-sizing(border-box);
-      @include breakpoint(max-width 670px){
+      @include breakpoint(max-width 770px){
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      @include breakpoint(max-width 600px){
         width: 100%;
         padding: 0;
       }
@@ -264,10 +277,17 @@
       border: 2px solid #80ca24;
       font-family: $RobotoMedium;
       color: #80ca24;
-      text-align: center;
       margin: 5px 0;
       padding: 5px 0;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 770px){
+        width: 30%;
+        margin-right: 10px;
+      }
+      @include breakpoint(max-width 600px){
+        width: 100%;
+        margin-right: 0;
+      }
       &:hover{
         border: 2px solid #33aafe;
         color: #33aafe;
@@ -287,6 +307,14 @@
       margin: 5px 0;
       padding: 5px 0;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 770px){
+        width: 30%;
+        margin-right: 10px;
+      }
+      @include breakpoint(max-width 600px){
+        width: 100%;
+        margin-right: 0;
+      }
       &:hover{
         border: 2px solid #33aafe;
         color: #33aafe;
@@ -309,6 +337,14 @@
       &:hover{
         border: 2px solid #e91818;
         color: #e91818;
+      }
+      @include breakpoint(max-width 770px){
+        width: 30%;
+        margin-right: 10px;
+      }
+      @include breakpoint(max-width 600px){
+        width: 100%;
+        margin-right: 0;
       }
     }
   }
@@ -334,6 +370,12 @@
     padding-bottom: 30px;
     @include box-sizing(border-box);
     background-color: #f6f4f5;
+    @include breakpoint(max-width 770px){
+      width: 50%;
+    }
+    @include breakpoint(max-width 600px){
+      width: 100%;
+    }
     &--title{
       display: block;
       position: relative;
@@ -342,6 +384,9 @@
       color: #848484;
       font-family: $RobotoMedium;
       font-size: 16px;
+      @include breakpoint(max-width 600px){
+        width: 100%;
+      }
       &:after{
         display: block;
         position: absolute;
@@ -367,6 +412,12 @@
       color: #575656;
       font-family: $RobotoLight;
       font-size: 14px;
+      @include breakpoint(max-width 770px){
+        width: 100%;
+      }
+      @include breakpoint(max-width 600px){
+        width: 100%;
+      }
     }
     &--text{
       display: block;
@@ -384,6 +435,12 @@
       color: #575656;
       font-family: $RobotoLight;
       font-size: 14px;
+      @include breakpoint(max-width 770px){
+        width: 100%;
+      }
+      @include breakpoint(max-width 600px){
+        width: 100%;
+      }
     }
     &--submit{
       display: block;
@@ -396,10 +453,12 @@
       border: 2px solid #80ca24;
       font-family: $RobotoMedium;
       color: #80ca24;
-      text-align: center;
       margin: 5px 0;
       padding: 5px 0;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 600px){
+        margin-right: calc(50% - (194px/2));
+      }
       &:hover{
         border: 2px solid #33aafe;
         color: #33aafe;
@@ -409,11 +468,17 @@
       display: block;
       position: relative;
       float: left;
-      width: 290px;
+      width: calc(100% - 586px);
       margin-top: 20px;
       padding: 0 30px;
       @include box-sizing(border-box);
       background-color: #fff;
+      @include breakpoint(max-width 770px){
+        width: 50%;
+      }
+      @include breakpoint(max-width 600px){
+        width: 100%;
+      }
       h3{
         display: block;
         position: relative;
@@ -430,8 +495,18 @@
         position: relative;
         float: left;
         width: 100%;
+        margin-top: 10px;
+        @include breakpoint(max-width 600px){
+          padding: 0;
+        }
+        li{
+          width: 100%;
+          line-height: 1.4;
+          color: #000;
+          font-family: $RobotoMedium;
+          font-size: 16px;
+        }
       }
-
     }
   }
   &__responses{
@@ -509,6 +584,9 @@
       position: relative;
       float: left;
       width: calc(100% - (130px + 290px));
+      @include breakpoint(max-width 770px){
+        width: calc(100% - 130px);
+      }
       @include breakpoint(max-width 600px){
         width: 100%;
       }
