@@ -1,0 +1,112 @@
+.add{
+  background-color: #fff;
+  &__wrapper{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+   /* margin-top: 20px;*/
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #f6f5f5;
+  }
+  &__form{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    position: relative;
+    float: left;
+    width: 536px;
+    padding: 30px 42px;
+    @include box-sizing(border-box);
+    > p{
+      display: block;
+      position: relative;
+      float: left;
+      width: 165px;
+      height: 30px;
+      text-align: left;
+      margin: 0;
+      color: #000;
+      font-family: $RobotoRegular;
+      font-size: 14px;
+      line-height: 30px;
+    }
+    > .single__resp-form--submit{
+      float: left;
+      margin-left: calc(50% - (194px/2));
+      margin-top: 20px;
+    }
+    &--field{
+      display: block;
+      position: relative;
+      float: left;
+      width: 238px;
+      height: 30px;
+      margin-bottom: 40px;
+      border: 1px solid #b8b8b9;
+      padding: 1px 10px;
+      @include box-sizing(border-box);
+    }
+    &--text{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - 165px);
+      height: 96px;
+      margin-bottom: 40px;
+      resize: none;
+      border: 1px solid #b8b8b9;
+      padding: 1px 10px;
+      @include box-sizing(border-box);
+      color: #000;
+      font-family: $RobotoRegular;
+      font-size: 14px;
+    }
+    &--photo{
+      display: block;
+      position: relative;
+      float: left;
+      width: 43px;
+      height: 39px;
+      margin-bottom: 40px;
+      margin-right: 100px;
+      cursor: pointer;
+      > span{
+        display: block;
+        position: relative;
+        float: left;
+        height: 30px;
+        width: 40px;
+        @include box-sizing(border-box);
+        text-align: center;
+        color: #fff;
+        left: 0;
+        font-size: 17px;
+        background-image: url('../img/icons/icon_camera.png');
+        background-repeat: no-repeat;
+      }
+      > input[type=file] {
+        display: none;
+      }
+    }
+    &--check{
+      display: block;
+      position: relative;
+      float: left;
+      > input[type=checkbox]{
+        float: left;
+        margin-right: 10px;
+      }
+      > a{
+        display: block;
+        position: relative;
+        float: left;
+        color: #33aafe;
+        font-family: $RobotoRegular;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+    }
+  }
+}
