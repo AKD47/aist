@@ -1,0 +1,32 @@
+.cabinet{
+  background-color: #fff;
+  &__navigation{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #334A50;
+    &--link{
+      display: block;
+      position: relative;
+      float: left;
+      padding: 10px 30px;
+      @include box-sizing(border-box);
+      color: #FFFFFF;
+      font-family: $RobotoBold;
+      font-size: 14px;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      &:hover{
+        color: #33aafe;
+        border-bottom: 2px solid #33aafe;
+      }
+    }
+  }
+  &__wrapper{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+}
