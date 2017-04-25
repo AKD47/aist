@@ -1,5 +1,6 @@
 var gulp = require('gulp'), // Подключаем Gulp
     sass = require('gulp-sass'), //Подключаем Sass пакет,
+    bourbon = require('node-bourbon'), //плагин burbon для Sass,
     browserSync = require('browser-sync'), // Подключаем Browser Sync
     concat = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
     uglify = require('gulp-uglifyjs'), // Подключаем gulp-uglifyjs (для сжатия JS)
@@ -60,7 +61,9 @@ gulp.task('sass', function () { // Создаем таск Sass
     ];
     return gulp.src('app/sass/**/*.scss')
         .pipe(plumber())        
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({
+            includePaths: bourbon.includePaths
+        }).on('error', sass.logError))
         .pipe(postcss(processors))
         .pipe(rename({
             suffix: ".min",
@@ -149,4 +152,4 @@ gulp.task('clear', function (callback) {
 gulp.task('default', ['watch']);
 
 /*
-npm i gulp gulp-sass browser-sync gulp-concat gulp-uglifyjs gulp-rename del gulp-imagemin imagemin-pngquant gulp.spritesmith gulp-svgstore gulp-svgmin gulp-cache gulp-html-extend gulp-sourcemaps rimraf gulp-plumber gulp-postcss autoprefixer cssnano postcss-pxtorem postcss-px-to-em postcss-short stylefmt postcss-assets postcss-short-spacing postcss-focus postcss-sorting postcss-font-magician postcss-fixes stylelint-config-standard --save-dev*/
+npm i gulp gulp-sass browser-sync gulp-concat gulp-uglifyjs gulp-rename del gulp-imagemin imagemin-pngquant gulp.spritesmith gulp-svgstore gulp-svgmin gulp-cache gulp-html-extend gulp-sourcemaps rimraf gulp-plumber gulp-postcss autoprefixer cssnano postcss-pxtorem postcss-px-to-em postcss-short stylefmt postcss-assets postcss-short-spacing postcss-focus postcss-sorting postcss-font-magician postcss-fixes stylelint-config-standard node-bourbon --save-dev*/
