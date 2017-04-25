@@ -105,42 +105,133 @@
 
             <form id="add-proposal-form" class="add__form">
 
-                <p>Название предложение</p>
+                <div class="add__form--element">
 
-                <input class="add__form--field" type="text" >
+                    <p>Название предложение</p>
 
-                <p>Адрес откуда</p>
+                    <input class="add__form--field" type="text">
 
-                <input class="add__form--field" type="text" >
+                    <div class="notification">
+                        <span>?</span>
+                        <p>Указывается короткое название предложения, например: "Перевозка холодильника". Описание
+                            должно состоять не более чем из 100 символов считая пробелы</p>
+                    </div>
 
-                <p>Адрес куда</p>
+                </div>
 
-                <input class="add__form--field" type="text" >
+                <div class="add__form--element">
 
-                <p>Описание</p>
+                    <p>Адрес откуда</p>
 
-                <textarea id="" class="add__form--text"></textarea>
+                    <input class="add__form--field" type="text">
 
-                <p>Фото</p>
+                    <div class="notification">
+                        <span>?</span>
+                        <p>Указывается область, город, улицу и дом, где курьер может получить посылку. В данном
+                            поле также могут указываться ориентиры, например станции метро, памятники и т.п.</p>
+                    </div>
 
-                <label class="add__form--photo">
-                    <span></span>
-                    <input class="input-file" type="file">
-                </label>
-                
-                <p>Срок исполнения</p>
+                </div>
 
-                <input class="add__form--field" type="text">
+                <div class="add__form--element">
 
-                <p>Цена</p>
+                    <p>Адрес куда</p>
 
-                <input class="add__form--field" type="text">
+                    <input class="add__form--field" type="text">
+
+                    <div class="notification">
+                        <span>?</span>
+                        <p>Указывается область, город, улицу и дом, куда курьер должен доставить посылку. В данном
+                            поле также могут указываться ориентиры, например станции метро, памятники и т.п.</p>
+                    </div>
+
+                </div>
+
+                <div class="add__form--element">
+
+                    <p>Описание</p>
+
+                    <textarea id="" class="add__form--text"></textarea>
+
+                    <div class="notification">
+                        <span>?</span>
+                        <p>Короткое описание посылки не более 300 символов вместе с пробелами</p>
+                    </div>
+
+                </div>
+
+                <div class="add__form--element">
+
+                    <p>Вес</p>
+
+                    <input class="add__form--field" type="text">
+
+                    <div class="notification">
+                        <span>?</span>
+                        <p>Указывается вес посылки в кг</p>
+                    </div>
+
+                </div>
+
+                <div class="add__form--element">
+
+                    <p>Габариты</p>
+
+                    <input class="add__form--field" type="text">
+
+                    <div class="notification">
+                        <span>?</span>
+                        <p>Указываются габариты посылки - высота, ширина и глубина</p>
+                    </div>
+
+                </div>
+
+                <div class="add__form--element">
+
+                    <p>Фото</p>
+
+                    <label class="add__form--photo">
+                        <span></span>
+                        <input class="input-file" type="file">
+                    </label>
+
+                    <div class="notification">
+                        <span>?</span>
+                        <p>Добавляются фото, не более 10-ти штук</p>
+                    </div>
+
+                </div>
+
+                <div class="add__form--element">
+
+                    <p>Срок исполнения</p>
+
+                    <input class="add__form--field" type="text">
+
+                    <div class="notification">
+                        <span>?</span>
+                        <p>Указывается дата, до наступления которой необходимо доставить посылку</p>
+                    </div>
+
+                </div>
+
+                <div class="add__form--element">
+
+                    <p>Цена</p>
+
+                    <input class="add__form--field" type="text">
+
+                    <div class="notification">
+                        <span>?</span>
+                        <p>Указывается цена в рублях РФ</p>
+                    </div>
+
+                </div>
 
                 <label for="rules" class="add__form--check">
                     <input type="checkbox" id="rules">
                     <a href="#">Соглашение с условиями сервиса</a>
                 </label>
-
 
                 <input class="single__resp-form--submit" type="submit" value="Опубликовать">
 

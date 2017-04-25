@@ -124,3 +124,41 @@ section {
     }
   }
 }
+
+.notification{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: auto;
+  > span{
+    display: block;
+    position: relative;
+    float: left;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #33aafe;
+    border-radius: 50%;
+    text-align: center;
+    color: #33aafe;
+    font-size: 14px;
+    font-family: $RobotoBold;
+  }
+  > p{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (20px + 10px));
+    height: auto;
+    padding: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #33aafe;
+    font-size: 14px;
+    font-family: $RobotoBold;
+    text-align: justify;
+  }
+}

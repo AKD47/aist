@@ -19,23 +19,44 @@
     width: 536px;
     padding: 30px 42px;
     @include box-sizing(border-box);
-    > p{
-      display: block;
-      position: relative;
-      float: left;
-      width: 165px;
-      height: 30px;
-      text-align: left;
-      margin: 0;
-      color: #000;
-      font-family: $RobotoRegular;
-      font-size: 14px;
-      line-height: 30px;
-    }
+
     > .single__resp-form--submit{
       float: left;
       margin-left: calc(50% - (194px/2));
       margin-top: 20px;
+    }
+    &--element{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      > p{
+        display: block;
+        position: relative;
+        float: left;
+        width: 165px;
+        height: 30px;
+        text-align: left;
+        margin: 0;
+        color: #000;
+        font-family: $RobotoRegular;
+        font-size: 14px;
+        line-height: 30px;
+      }
+      > .notification{
+        position: absolute;
+        top: 5px;
+        left: 91%;
+        cursor: pointer;
+        &:hover{
+          > p{
+            display: block;
+          }
+        }
+        > p{
+          display: none;
+        }
+      }
     }
     &--field{
       display: block;
@@ -52,7 +73,7 @@
       display: block;
       position: relative;
       float: left;
-      width: calc(100% - 165px);
+      width: 238px;
       height: 96px;
       margin-bottom: 40px;
       resize: none;
