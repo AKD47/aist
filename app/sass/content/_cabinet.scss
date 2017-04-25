@@ -22,11 +22,41 @@
         border-bottom: 2px solid #33aafe;
       }
     }
+    &--link.active{
+      color: #33aafe;
+      border-bottom: 2px solid #33aafe;
+    }
   }
   &__wrapper{
     display: block;
     position: relative;
     float: left;
     width: 100%;
+    margin-bottom: 150px;
+  }
+  &__empty{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    @include box-sizing(border-box);
+    > p{
+      display: block;
+      position: relative;
+      float: left;
+      margin: 0;
+      margin-right: 20px;
+      color: #000;
+      font-size: 14px;
+      font-family: $RobotoMedium;
+      line-height: 42px;
+    }
+    > .single__item--tool{
+      width: 250px;
+    }
   }
 }
