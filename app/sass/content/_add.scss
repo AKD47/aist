@@ -16,10 +16,9 @@
     @include flex-direction(row);
     position: relative;
     float: left;
-    width: 536px;
+    width: 60%;
     padding: 30px 42px;
     @include box-sizing(border-box);
-
     > .single__resp-form--submit{
       float: left;
       margin-left: calc(50% - (194px/2));
@@ -46,7 +45,7 @@
       > .notification{
         position: absolute;
         top: 5px;
-        left: 91%;
+        left: 102%;
         cursor: pointer;
         &:hover{
           > p{
@@ -55,25 +54,91 @@
         }
         > p{
           display: none;
+          width: 260px;
         }
+      }
+      > .file-input{
+        display: block;
+        position: relative;
+        float: left;
+        width: calc(100% - 165px);
+        /*height: 30px;*/
+        margin-bottom: 40px;
+       /* border: 1px solid #b8b8b9;
+        border-radius: 0;*/
+         .form-control{
+          border: 1px solid #b8b8b9;
+          border-radius: 0;
+           &:focus{
+             border: 1px solid #2196f3;
+             -webkit-box-shadow: 0 0 4px rgba(32,150,243,.47), inset 0 1px 3px rgba(0,0,0,.17);
+             box-shadow: 0 0 4px rgba(32,150,243,.47), inset 0 1px 3px rgba(0,0,0,.17);
+           }
+        }
+      }
+      .file-preview-frame {
+        position: relative;
+        display: block;
+        margin: 0;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        width: 30%;
+        height: 160px;
+        border: 1px solid #ddd;
+        box-shadow: 1px 1px 5px 0 #a2958a;
+        padding: 6px;
+        @include box-sizing(border-box);
+        float: left;
+        text-align: center;
+        vertical-align: middle;
+      }
+      .kv-file-content{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 80px;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      .file-footer-caption {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        text-align: center;
+        padding-top: 4px;
+        font-size: 11px;
+        color: #777;
+        margin: 5px auto;
       }
     }
     &--field{
       display: block;
       position: relative;
       float: left;
-      width: 238px;
+      width: calc(100% - 165px);
       height: 30px;
       margin-bottom: 40px;
       border: 1px solid #b8b8b9;
       padding: 1px 10px;
       @include box-sizing(border-box);
+      &:focus{
+        border: 1px solid #2196f3;
+        -webkit-box-shadow: 0 0 4px rgba(32,150,243,.47), inset 0 1px 3px rgba(0,0,0,.17);
+        box-shadow: 0 0 4px rgba(32,150,243,.47), inset 0 1px 3px rgba(0,0,0,.17);
+      }
     }
     &--text{
       display: block;
       position: relative;
       float: left;
-      width: 238px;
+      width: calc(100% - 165px);
       height: 96px;
       margin-bottom: 40px;
       resize: none;
@@ -83,6 +148,11 @@
       color: #000;
       font-family: $RobotoRegular;
       font-size: 14px;
+      &:focus{
+        border: 1px solid #2196f3;
+        -webkit-box-shadow: 0 0 4px rgba(32,150,243,.47), inset 0 1px 3px rgba(0,0,0,.17);
+        box-shadow: 0 0 4px rgba(32,150,243,.47), inset 0 1px 3px rgba(0,0,0,.17);
+      }
     }
     &--photo{
       display: block;

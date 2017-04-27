@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
     /*header mobile menu*/    
-
     $(document).on('click', '#burger', function (event){
         
         var pull = $('#burger'),
@@ -27,7 +26,6 @@ $(document).ready(function () {
     /*close header mobile menu*/
 
     /*cabinet header menu*/    
-
     $(document).on('click', '#cabinet-trigger', function (event){
 
         var cabinetTrigger = $('#cabinet-trigger'),
@@ -51,7 +49,11 @@ $(document).ready(function () {
         });
     }*/
     /*close cabinet header menu*/
-    
+
+    /*add form in proposal form*/
+    $("#add-form-foto").fileinput();
+    /*close add form in proposal form*/
+
     /*top-customer slider*/
     $('#top-customer-slider').owlCarousel({
         loop: true,
