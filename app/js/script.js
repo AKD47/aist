@@ -51,7 +51,7 @@ $(document).ready(function () {
     /*close cabinet header menu*/
 
     /*add form in proposal form*/
-    $("#add-form-foto").fileinput();
+    $('#add-form-foto').fileinput();
     /*close add form in proposal form*/
 
     /*top-customer slider*/
