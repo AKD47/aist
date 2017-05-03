@@ -20,7 +20,7 @@ section {
   color: #202020;
   font-family: $RobotoBold;
   z-index: 2;
-  @include breakpoint(max-width 670px){
+  @include breakpoint(max-width 670px) {
     width: 100%;
     margin-left: 0;
     margin-top: 30px;
@@ -37,12 +37,12 @@ section {
   height: 2px;
   background-color: #33aafe;
   margin-top: -43px;
-  @include breakpoint(max-width 670px){
-   display: none;
+  @include breakpoint(max-width 670px) {
+    display: none;
   }
 }
 
-.big-title{
+.big-title {
   display: block;
   position: relative;
   float: left;
@@ -55,32 +55,32 @@ section {
   font-family: $RobotoBold;
   font-size: 36px;
   text-transform: uppercase;
-  @include breakpoint(max-width 670px){
+  @include breakpoint(max-width 670px) {
     padding: 0 10%;
     @include box-sizing(border-box);
   }
 }
 
-.breadcrumbs{
+.breadcrumbs {
   display: block;
   position: relative;
   float: left;
   width: 100%;
-  &__list{
+  &__list {
     display: block;
     position: relative;
     float: left;
     margin: 0;
     padding: 0;
     list-style: none;
-    li{
+    li {
       display: block;
       position: relative;
       float: left;
-      @include breakpoint(max-width 600px){
+      @include breakpoint(max-width 600px) {
         /*width: 100%;*/
       }
-      &:after{
+      &:after {
         display: block;
         position: absolute;
         content: '/';
@@ -89,11 +89,11 @@ section {
         font-family: $RobotoLight;
         color: #33aafe;
         font-size: 20px;
-        @include breakpoint(max-width 600px){
-         /*display: none;*/
+        @include breakpoint(max-width 600px) {
+          /*display: none;*/
         }
       }
-      a{
+      a {
         display: block;
         position: relative;
         float: left;
@@ -103,12 +103,12 @@ section {
         font-family: $RobotoLight;
         font-size: 14px;
         text-decoration: underline;
-        &:hover{
+        &:hover {
           text-decoration: none;
         }
       }
     }
-    li.active{
+    li.active {
       display: block;
       position: relative;
       float: left;
@@ -118,20 +118,20 @@ section {
       font-family: $RobotoLight;
       font-size: 14px;
       text-decoration: none;
-      &:after{
+      &:after {
         color: transparent;
       }
     }
   }
 }
 
-.notification{
+.notification {
   display: block;
   position: relative;
   float: left;
   width: 100%;
   height: auto;
-  > span{
+  > span {
     display: block;
     position: relative;
     float: left;
@@ -144,7 +144,7 @@ section {
     font-size: 14px;
     font-family: $RobotoBold;
   }
-  > p{
+  > p {
     display: block;
     position: relative;
     float: left;
@@ -160,5 +160,25 @@ section {
     font-size: 14px;
     font-family: $RobotoBold;
     text-align: justify;
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 5px;
+      left: -10px;
+      border-top: 5px solid transparent;
+      border-right: 10px solid #33aafe;
+      border-bottom: 5px solid transparent;
+    }
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 5px;
+      left: -8px;
+      border-top: 5px solid transparent;
+      border-right: 10px solid #fff;
+      border-bottom: 5px solid transparent;
+    }
   }
 }

@@ -54,6 +54,14 @@ $(document).ready(function () {
     $('#add-form-foto').fileinput();
     /*close add form in proposal form*/
 
+    /*add form datapicker*/
+    $('#add-form-datapicker').datepicker({
+        minDate: new Date(),//только от даты сегодняшней
+        range: true,//возможность выбрать диапазон дат
+        toggleSelected: false//для того, чтобы иметь возомжность выбрать одну и ту же дату
+    });
+    /*close add form datapicker*/
+
     /*top-customer slider*/
     $('#top-customer-slider').owlCarousel({
         loop: true,
