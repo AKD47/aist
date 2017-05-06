@@ -18,6 +18,7 @@ section {
   padding: 0 42px;
   @include box-sizing(border-box);
   color: #202020;
+  font-size: 30px;
   font-family: $RobotoBold;
   z-index: 2;
   @include breakpoint(max-width 670px) {
