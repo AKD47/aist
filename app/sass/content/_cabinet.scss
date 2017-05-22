@@ -17,7 +17,7 @@
       font-size: 14px;
       border-top: 2px solid transparent;
       border-bottom: 2px solid transparent;
-      &:hover{
+      &:hover, &:focus{
         color: #33aafe;
         border-bottom: 2px solid #33aafe;
       }
@@ -58,5 +58,89 @@
     > .single__item--tool{
       width: 250px;
     }
+  }
+  &__sender{
+    display: block;
+    position: relative;
+    float: left;
+    width: 249px;
+    padding-top: 40px;
+    @include box-sizing(border-box);
+    &--item{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      @include box-sizing(border-box);
+      &:hover{
+        background-color: #e0e0e0;
+      }
+    }
+    &--item.active{
+      background-color: #e0e0e0;
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        top: 13px;
+        right: 0;
+        border-top: 10px solid transparent;
+        border-right: 10px solid #33aafe;
+        border-bottom: 10px solid transparent;
+      }
+    }
+    &--avatar{
+      display: block;
+      position: relative;
+      float: left;
+      size: 35px;
+      margin-left: 40px;
+      overflow: hidden;
+      border-radius: 50%;
+      background-color: #f2e2e5;
+      img{
+        size: 100%;
+        object-fit: cover;
+      }
+      span{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        color: #0f1111;
+        font-size: 23px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+    &--name{
+      display: block;
+      display: -webkit-box;
+      position: relative;
+      float: left;
+      width: 133px;
+      height: calc(18px * 1.5 * 1);
+      margin-top: 5px;
+      margin-left: 10px;
+      color: #33aafe;
+      font-family: $RobotoMedium;
+      font-size: 18px;
+      line-height: 1.5;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &__messages{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - 248px);
+    border-left: 1px solid #dedede;
   }
 }

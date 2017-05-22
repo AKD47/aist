@@ -5,7 +5,6 @@ $(document).ready(function () {
         
         var pull = $('#burger'),
             menu = $('.header__nav');
-        
         event.preventDefault();
         if (pull.hasClass('show')) {
             pull.removeClass('show');
