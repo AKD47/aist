@@ -76,6 +76,18 @@
       @include box-sizing(border-box);
       &:hover{
         background-color: #e0e0e0;
+        &:after{
+          display: block;
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 0;
+          top: 13px;
+          right: 0;
+          border-top: 10px solid transparent;
+          border-right: 10px solid #33aafe;
+          border-bottom: 10px solid transparent;
+        }
       }
     }
     &--item.active{
@@ -135,12 +147,230 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+    &--messanges{
+      display: block;
+      position: relative;
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin-top: 7px;
+      margin-right: 10px;
+      background: linear-gradient(#33aafe,#334a51);
+      border-radius: 50%;
+      text-align: center;
+      color: #ffffff;
+      font-family: $RobotoMedium;
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
   &__messages{
     display: block;
     position: relative;
     float: left;
-    width: calc(100% - 248px);
+    width: calc(100% - 249px);
     border-left: 1px solid #dedede;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include box-sizing(border-box);
+    &--box{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: auto;
+      padding-right: 32px;
+      padding-left: 32px;
+      padding-bottom: 0;
+      @include box-sizing(border-box);
+    }
+    &--wrapper{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 450px;
+      overflow-y: scroll;
+    }
+    &--question{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-right: 0;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      padding-right: 15%;
+      @include box-sizing(border-box);
+      p {
+        display: block;
+        position: relative;
+        float: left;
+        margin: 0;
+        width: calc(100% - (89px + 14px));
+        background-color: #4ea7c5;
+        padding: 11px;
+        @include box-sizing(border-box);
+        border-radius: 7px;
+        color: white;
+        font-family: $RobotoRegular;
+        font-size: 14px;
+        &:after {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 8px;
+          left: -10px;
+          width: 0;
+          height: 0;
+          border-top: 5px solid transparent;
+          border-right: 10px solid #4ea7c5;
+          border-bottom: 5px solid transparent;
+        }
+      }
+      a {
+        display: block;
+        position: relative;
+        float: left;
+        width: 44px;
+        height: 44px;
+        margin-right: 14px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #4a43a8;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &--date{
+      display: block;
+      position: absolute;
+      width: 100%;
+      bottom: -16px;
+      left: 0;
+      text-align: left;
+      color: #838389;
+      font-family: $RobotoLight;
+      font-size: 10px;
+    }
+    &--answer{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-right: 0;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      padding-left: 15%;
+      @include box-sizing(border-box);
+      p {
+        display: block;
+        position: relative;
+        float: left;
+        margin: 0;
+        width: calc(100% - (89px + 14px));
+        background-color: rgba(51, 74, 81, 0.7);
+        padding: 11px;
+        @include box-sizing(border-box);
+        border-radius: 7px;
+        color: white;
+        font-family: $RobotoRegular;
+        font-size: 14px;
+        &:after {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 8px;
+          right: -10px;
+          width: 0;
+          height: 0;
+          border-top: 5px solid transparent;
+          border-left: 10px solid rgba(51, 74, 81, 0.7);
+          border-bottom: 5px solid transparent;
+        }
+        .cabinet__messages--date{
+          text-align: right;
+        }
+      }
+      a {
+        display: block;
+        position: relative;
+        float: left;
+        width: 44px;
+        height: 44px;
+        margin-left: 14px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #4a43a8;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &--form{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      background-color: #fbfbfb;
+      padding: 16px;
+      @include box-sizing(border-box);
+      textarea {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 95px;
+        background-color: white;
+        border: 1px solid #dedede;
+        border-radius: 15px;
+        resize: none;
+        padding: 10px;
+        @include box-sizing(border-box);
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    &--notice{
+      display: block;
+      position: relative;
+      float: left;
+      width: 128px;
+      margin-top: 26px;
+      margin-left: calc(100% - (128px + 149px + 20px + 10px));
+      margin-right: 10px;
+      color: #334a51;
+      font-family: $RobotoBold;
+      font-size: 14px;
+      line-height: 28px;
+    }
+    &--submit{
+      display: block;
+      position: relative;
+      float: right;
+      width: 149px;
+      height: 28px;
+      margin-top: 26px;
+      margin-right: 20px;
+      background-color: #334a51;
+      border: 1px solid rgba(0, 0, 0, 0.16);
+      border-radius: 20px;
+      color: #fff;
+      font-family: $RobotoBold;
+      font-size: 13px;
+      text-align: center;
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        background: linear-gradient(#626f7b, #334a51);
+      }
+    }
   }
 }
