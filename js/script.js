@@ -170,6 +170,29 @@ $(document).ready(function () {
         });
     }
     /*close proposals filter fixed*/
+    
+    /*proposal filter from list*/
+    $(document).on('click', '#prop-filter-search-from, #prop-filter-search-to', function (event) {
+       var filterList = $(this).next('.prop-filter__from');
+       if($(this).hasClass('show')){
+           $(this).removeClass('show');
+           filterList.slideUp('400');
+       } else {
+           $('#prop-filter-search-from, #prop-filter-search-to').removeClass('show');
+           $('.prop-filter__from').slideUp('400');
+           $(this).addClass('show');
+           filterList.slideDown('400');
+       }
+    });
+    $(document).on('click', '.prop-filter__from a', function (event) {
+        event.preventDefault();
+        var optionName = $(this).text(),
+            optionPlace = $(this).closest('#prop-filter-search-form').find('.prop-filter__field.show');       
+        optionPlace.val(optionName);//меняем имя
+        $('#prop-filter-search-from, #prop-filter-search-to').removeClass('show');
+        $('.prop-filter__from').slideUp('400');
+    });
+    /*close proposal filter from list*/
 
 });
 
