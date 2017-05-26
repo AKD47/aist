@@ -21,7 +21,7 @@
     display: block;
     position: relative;
     float: left;
-    width: 30%;
+    width: 44%;
     height: 100%;
     padding-left: 30px;
     padding-right: 37px;
@@ -40,7 +40,13 @@
       border: 1px solid #33aafe;
     }
   }
-  &__field:nth-of-type(2), &__field:nth-of-type(3) {
+  &__field:first-of-type{
+    @include breakpoint(max-width 670px){
+      margin-top: 0;
+      margin-bottom: 2px;
+    }
+  }
+  &__field:nth-of-type(2) {
     border-radius: 0;
     border-left: 1px solid #33aafe;
     @include breakpoint(max-width 670px){
