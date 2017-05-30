@@ -169,7 +169,8 @@
 
                     <p>Загрузить аватар с компютера</p>
 
-                    <input id="add-form-foto" type="file" class="file" multiple data-min-file-count="1" value="img/avatar.png">
+                    <input id="add-form-foto" type="file" class="file" multiple data-min-file-count="1"
+                           value="img/avatar.png">
 
                     <!--<div class="notification">
                         <span>?</span>
@@ -197,10 +198,10 @@
 
                     <input class="add__form--field" type="text">
 
-                   <!-- <div class="notification">
-                        <span>?</span>
-                        <p>Указываются габариты посылки - высота, ширина и глубина</p>
-                    </div>-->
+                    <!-- <div class="notification">
+                         <span>?</span>
+                         <p>Указываются габариты посылки - высота, ширина и глубина</p>
+                     </div>-->
 
                 </div>
 
@@ -238,37 +239,55 @@
 
                         <div class="cabinet__packages--item">
 
-                            <p>НАЧАЛЬНЫЙ</p>
+                            <h3>НАЧАЛЬНЫЙ</h3>
 
-                            <h3>пакет <br> СТАНДАРТ</h3>
+                            <p>Информация:</p>
 
-                            <p>ХОТИТЕ УЗНАТЬ <a href="#">ПОДРОБНЕЕ?</a></p>
+                            <ol>
+                                <li>Возможность подавать не более 5-ти заявок.</li>
+                                <li>Невозможно создать "Срочный заказ".</li>
+                                <li>Заявки смещаются вниз по мере поступления новых заявок.</li>
+                            </ol>
 
-                            <input type="radio" >
+                            <input type="radio" name="package-type" id="cabinet-package-primary">
+                            <label for="cabinet-package-primary" class="business-options__item--forcheck">
+                                <span class="business-options__item--checked"></span>вт
+                            </label>
 
                         </div>
 
                         <div class="cabinet__packages--item ">
 
-                            <p>СРЕДНИЙ</p>
+                            <h3>РАСШИРЕННЫЙ</h3>
 
-                            <h3>пакет <br> РАСШИРЕННЫЙ</h3>
+                            <p>Информация:</p>
 
-                            <p>ХОТИТЕ УЗНАТЬ <a href="#">ПОДРОБНЕЕ?</a></p>
+                            <ol>
+                                <li>Возможность подавать не более 10-ти заявок.</li>
+                                <li>Возможность создать "Срочный заказ".</li>
+                                <li>Заявки смещаются вниз по мере поступления новых заявок.</li>
+                            </ol>
 
-                            <input type="radio" >
+                            <input type="radio" name="package-type">
+                            <label for="2" class="business-options__item--forcheck">
+                                <span class="business-options__item--checked"></span>вт
+                            </label>
 
                         </div>
 
                         <div class="cabinet__packages--item top">
 
-                            <p>ПРОДВИНУТЫЙ</p>
+                            <h3>PRO</h3>
 
-                            <h3>пакет <br> ТОП</h3>
+                            <p>Информация:</p>
 
-                            <p>ХОТИТЕ УЗНАТЬ <a href="#">ПОДРОБНЕЕ?</a></p>
+                            <ol>
+                                <li>Количество заявок не ограничено.</li>
+                                <li>Возможность создать "Срочный заказ".</li>
+                                <li>Заявки всегда в ТОП.</li>
+                            </ol>
 
-                            <input type="radio" >
+                            <input type="radio" name="package-type">
 
                         </div>
 
