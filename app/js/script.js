@@ -53,8 +53,9 @@ $(document).ready(function () {
     $(document).on('click', '.cabinet__packages--about', function (event) {
         event.preventDefault();
         var target = $(this).attr('href'),
-            targetBlock = $(target);
-
+            targetBlock = $(target),
+            top = $('.cabinet__packages--notification').offset().top;
+        
         if ($(this).hasClass('open')) {
             targetBlock.slideUp();
             $(this).removeClass('open');
@@ -63,6 +64,7 @@ $(document).ready(function () {
             $('.cabinet__packages--hover-block').slideUp();
             targetBlock.slideDown();
             $(this).addClass('open');
+            $('html, body').animate({scrollTop: top}, 'slow');         
         }
     });
     /*close script*/

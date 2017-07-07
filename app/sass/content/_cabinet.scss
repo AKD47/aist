@@ -17,6 +17,18 @@
       font-size: 14px;
       border-top: 2px solid transparent;
       border-bottom: 2px solid transparent;
+      @include breakpoint(max-width 770px){
+        width: 25%;
+        text-align: center;
+      }
+      @include breakpoint(max-width 680px){
+        width: 33%;
+        text-align: center;
+      }
+      @include breakpoint(max-width 570px){
+        width: 100%;
+        text-align: center;
+      }
       &:hover, &:focus{
         color: #33aafe;
         border-bottom: 2px solid #33aafe;
@@ -386,6 +398,10 @@
     width: 100%;
     padding: 10px 0;
     @include box-sizing(border-box);
+    @include breakpoint(max-width 600px){
+      @include flex-direction(column);
+      @include align-items(center);
+    }
     > .more-block {
       @include display-flex(flex);
       @include flex-wrap(wrap);
@@ -420,6 +436,10 @@
       margin-bottom: 36px;
       border: 1px solid #e8e9ed;
       border-radius: 5px 0 0 5px;
+      @include breakpoint(max-width 600px){
+        width: 250px;
+        border-radius: 5px;
+      }
       p:first-of-type {
         margin-top: 39px;
         margin-bottom: 0;
@@ -478,10 +498,16 @@
     }
     &--item:nth-of-type(2) {
       border-radius: 0 0 0 0;
+      @include breakpoint(max-width 600px){
+        border-radius: 5px;
+      }
     }
     &--item:nth-of-type(3) {
      /* border-radius: 0 0 0 0;*/
       border-radius: 0 5px 5px 0;
+      @include breakpoint(max-width 600px){
+        border-radius: 5px;
+      }
     }
    /* &--item:nth-of-type(4) {
       border-radius: 0 5px 5px 0;
