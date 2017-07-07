@@ -380,12 +380,19 @@
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include flex-direction(row);
-    @include justify-content(space-between);
+    @include justify-content(center);
     position: relative;
     float: left;
     width: 100%;
     padding: 10px 0;
     @include box-sizing(border-box);
+    > .more-block {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(center);
+      margin-bottom: 52px;
+    }
     &--title {
       display: block;
       position: relative;
@@ -394,9 +401,12 @@
       margin-top: 30px;
       margin-bottom: 30px;
       text-align: center;
-      color: #060400;
-      font-size: 14px;
-      font-weight: 700;
+      color: #040000;
+      font-size: 18px;
+      font-weight: 500;
+      > span {
+        color: #ee2e24;
+      }
     }
     &--item {
       @include display-flex(flex);
@@ -405,46 +415,247 @@
       @include align-items(center);
       position: relative;
       float: left;
-      width: 30%;
-      height: 330px;
-      margin-bottom: 52px;
+      width: 188px;
+      height: 305px;
+      margin-bottom: 36px;
       border: 1px solid #e8e9ed;
-      background-color: #f6f5f5;
-      /*border-radius: 5px 0 0 5px;*/
-      h3 {
-        position: relative;
-        width: 100%;
-        float: left;
-        margin-top: 0;
-        margin-bottom: 10px;
-        padding: 10px 0;
-        @include box-sizing(border-box);
-        background-color: #33aafe;
-        color: #ffffff;
-        font-size: 19px;
-        font-weight: 700;
-        line-height: 23px;
-        text-align: center;
-      }
-      p {
-        color: #202020;
-        font-size: 14px;
-        font-weight: 400;
+      border-radius: 5px 0 0 5px;
+      p:first-of-type {
+        margin-top: 39px;
+        margin-bottom: 0;
+        color: #9fa3a7;
+        font-size: 8px;
+        font-family: $RobotoLight;
         text-transform: uppercase;
       }
-      ol{
+      h3 {
+        margin-top: 16px;
+        margin-bottom: 17px;
+        color: #000;
+        font-size: 15px;
+        font-family: $RobotoBold;
+        line-height: 18px;
+        padding: 0;
+        span {
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          text-align: center;
+          &:last-of-type {
+            text-transform: uppercase;
+          }
+        }
+      }
+      .icon {
+        display: block;
+        position: relative;
+        float: left;
+        width: 51px;
+        height: 51px;
+        margin-bottom: 28px;
+        overflow: hidden;
+        img {
+          size: 100%;
+          object-fit: contain;
+        }
+      }
+      p:nth-of-type(2) {
+        text-align: center;
+        color: #000;
+        font-size: 9px;
+        font-family: $RobotoRegular;
+        line-height: 11px;
+        margin: 0;
+        a {
+          color: #000;
+          text-decoration: underline;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    &--item:nth-of-type(2) {
+      border-radius: 0 0 0 0;
+    }
+    &--item:nth-of-type(3) {
+     /* border-radius: 0 0 0 0;*/
+      border-radius: 0 5px 5px 0;
+    }
+   /* &--item:nth-of-type(4) {
+      border-radius: 0 5px 5px 0;
+    }*/
+    &--item.top {
+      background-color: #80ca24;
+      p:first-of-type {
+        color: #ffffff;
+      }
+      h3 {
+        color: #fbfbfb;
+      }
+      p:nth-of-type(2) {
+        text-align: center;
+        color: #ffffff;
+        font-size: 9px;
+        font-weight: 600;
+        line-height: 14px;
+        margin: 0;
+        a {
+          color: #ffffff;
+          text-decoration: underline;
+        }
+      }
+      .cabinet__packages--buy {
+        border: 2px solid #fff;
+        color: #fff;
+        &:hover{
+          border: 2px solid #33aafe;
+          color: #33aafe;
+        }
+      }
+    }
+    &--buy {
+      display: block;
+      position: relative;
+      float: left;
+      width: 118px;
+      height: 33px;
+      margin-top: 33px;
+      border-radius: 20px;
+      border: 2px solid #80ca24;
+      text-align: center;
+      color: #80ca24;
+      font-size: 13px;
+      font-family: $RobotoBold;
+      line-height: 30px;
+      text-transform: uppercase;
+      &:hover{
+        border: 2px solid #33aafe;
+        color: #33aafe;
+      }
+    }
+    &--notification {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 47px;
+      text-align: center;
+      color: #040000;
+      font-size: 13px;
+      font-family: $RobotoMedium;
+      > a {
+        color: #80ca24;
+        text-decoration: underline;
+        &:hover{
+          color: #33aafe;
+          text-decoration: none;
+        }
+      }
+    }
+    &--hover-block {
+      display: none;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 62px;
+      padding: 0 62px;
+      @include box-sizing(border-box);
+      @include breakpoint(max-width 430px) {
+        padding: 0;
+      }
+      > h3 {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 29px;
+        color: #040000;
+        font-size: 17px;
+        font-weight: 500;
+        > span {
+          text-transform: uppercase;
+        }
+      }
+      ul {
         display: block;
         position: relative;
         float: left;
         width: 100%;
         margin: 0;
-        padding-left: 24px;
-        padding-right: 10px;
-        @include box-sizing(border-box);
-        li{
-          color: #202020;
-          font-size: 12px;
-          font-weight: 400;
+        padding: 0;
+        list-style: none;
+        li {
+          @include display-flex(flex);
+          @include flex-wrap(wrap);
+          @include flex-direction(row);
+          @include justify-content(space-between);
+          position: relative;
+          float: left;
+          width: 100%;
+          > .descr {
+            display: block;
+            position: relative;
+            float: left;
+            width: 100%;
+            color: #040000;
+            font-size: 13px;
+            font-family: $RobotoMedium;
+            line-height: 25px;
+            /* &:last-of-type{
+               font-size: 16px;
+               font-family: $RobotoBold;
+               text-align: right;
+             }*/
+          }
+          > .val {
+            font-size: 16px;
+            font-weight: 700;
+            text-align: right;
+            line-height: 25px;
+            @include breakpoint(max-width 429px) {
+              width: 100%;
+            }
+          }
+          &:last-of-type {
+            @include display-flex(flex);
+            @include flex-wrap(wrap);
+            @include flex-direction(row);
+            @include justify-content(flex-end);
+            > .descr {
+              display: block;
+              position: relative;
+              float: left;
+              width: auto;
+              color: #040000;
+              font-size: 13px;
+              font-family: $RobotoMedium;
+              margin: 0 15px;
+              /* &:nth-of-type(even){
+                 font-size: 16px;
+                 font-weight: 700;
+               }*/
+            }
+            > .val {
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 25px;
+            }
+          }
+          &:last-of-type:before {
+            display: block;
+            position: relative;
+            content: '';
+            float: left;
+            width: 100%;
+            height: 1px;
+            background-color: #d1d1d1;
+            margin-top: 18px;
+            margin-bottom: 18px;
+          }
         }
       }
     }
@@ -500,5 +711,20 @@
         border: 3px solid white;
       }
     }*/
+  }
+  &__tariff-title{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    font-family: $RobotoMedium;
+  }
+  &__tariff-item{
+
   }
 }

@@ -21,7 +21,7 @@ $(document).ready(function () {
                 $('#burger').removeClass('show');
             }
         });
-    }     */
+    }*/
     /*close header mobile menu*/
 
     /*cabinet header menu*/    
@@ -48,6 +48,24 @@ $(document).ready(function () {
         });
     }*/
     /*close cabinet header menu*/
+
+    /*show cabinet tariff description*/
+    $(document).on('click', '.cabinet__packages--about', function (event) {
+        event.preventDefault();
+        var target = $(this).attr('href'),
+            targetBlock = $(target);
+
+        if ($(this).hasClass('open')) {
+            targetBlock.slideUp();
+            $(this).removeClass('open');
+        } else {
+            $('.cabinet__packages--about').removeClass('open');
+            $('.cabinet__packages--hover-block').slideUp();
+            targetBlock.slideDown();
+            $(this).addClass('open');
+        }
+    });
+    /*close script*/
 
     /*add form in proposal form*/
     $('#add-form-foto').fileinput();

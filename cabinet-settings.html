@@ -108,6 +108,7 @@
             <a href="#" class="cabinet__navigation--link">Мои сообщения</a>
             <a href="#" class="cabinet__navigation--link active">Мои настройки</a>
             <a href="#" class="cabinet__navigation--link">Мой счет</a>
+            <a href="#" class="cabinet__navigation--link ">Тарифы</a>
 
         </div>
 
@@ -117,7 +118,7 @@
 
         <div class="container">
 
-            <h3 class="title">Навтройки профиля</h3>
+            <h3 class="title">Настройки профиля</h3>
 
             <div class="separator"></div>
 
@@ -125,7 +126,7 @@
 
                 <div class="add__form--element">
 
-                    <p>Фамилия</p>
+                    <label>Фамилия</label>
 
                     <input class="add__form--field" type="text" value="Панов">
 
@@ -139,7 +140,7 @@
 
                 <div class="add__form--element">
 
-                    <p>Имя</p>
+                    <label>Имя</label>
 
                     <input class="add__form--field" type="text" value="Вадим">
 
@@ -153,7 +154,7 @@
 
                 <div class="add__form--element">
 
-                    <p>Публичный email</p>
+                    <label>Публичный email</label>
 
                     <input class="add__form--field" type="text" value="example@mail.io">
 
@@ -167,7 +168,7 @@
 
                 <div class="add__form--element">
 
-                    <p>Загрузить аватар с компютера</p>
+                    <label>Загрузить аватар с компютера</label>
 
                     <input id="add-form-foto" type="file" class="file" multiple data-min-file-count="1"
                            value="img/avatar.png">
@@ -181,7 +182,7 @@
 
                 <div class="add__form--element">
 
-                    <p>email</p>
+                    <label>email</label>
 
                     <input class="add__form--field" type="text" value="registr@mail.io">
 
@@ -194,7 +195,7 @@
 
                 <div class="add__form--element">
 
-                    <p>Новый пароль</p>
+                    <label>Новый пароль</label>
 
                     <input class="add__form--field" type="text">
 
@@ -208,7 +209,7 @@
 
                 <div class="add__form--element">
 
-                    <p>Текущий пароль</p>
+                    <label>Текущий пароль</label>
 
                     <input class="add__form--field" type="text">
                     <!--<div class="notification">
@@ -220,7 +221,7 @@
 
                 <div class="add__form--element">
 
-                    <p>Цена</p>
+                    <label>Цена</label>
 
                     <input class="add__form--field" type="text">
 
@@ -233,11 +234,19 @@
 
                 <div class="add__form--element">
 
-                    <div class="cabinet__packages">
+                    <label>Текущий тариф</label>
 
-                        <h3 class="cabinet__packages--title">Ваш пакет услуг</h3>
+                    <p class="add__form--tariff">Пакет Базовый</p>
 
-                        <div class="cabinet__packages--item">
+                    <p class="add__form--tariff-period">до <span>23.05.2015 (еще 1 месяц)</span></p>
+
+                    <a href="#" class="add__form--tariff-edit">сменить тариф</a>
+
+                    <!--<div class="cabinet__packages">
+
+                        <h3 class="cabinet__packages&#45;&#45;title">Ваш пакет услуг</h3>
+
+                        <div class="cabinet__packages&#45;&#45;item">
 
                             <h3>НАЧАЛЬНЫЙ</h3>
 
@@ -250,13 +259,13 @@
                             </ol>
 
                             <input type="radio" name="package-type" id="cabinet-package-primary">
-                            <label for="cabinet-package-primary" class="business-options__item--forcheck">
-                                <span class="business-options__item--checked"></span>вт
+                            <label for="cabinet-package-primary" class="business-options__item&#45;&#45;forcheck">
+                                <span class="business-options__item&#45;&#45;checked"></span>вт
                             </label>
 
                         </div>
 
-                        <div class="cabinet__packages--item ">
+                        <div class="cabinet__packages&#45;&#45;item ">
 
                             <h3>РАСШИРЕННЫЙ</h3>
 
@@ -269,13 +278,13 @@
                             </ol>
 
                             <input type="radio" name="package-type">
-                            <label for="2" class="business-options__item--forcheck">
-                                <span class="business-options__item--checked"></span>вт
+                            <label for="2" class="business-options__item&#45;&#45;forcheck">
+                                <span class="business-options__item&#45;&#45;checked"></span>вт
                             </label>
 
                         </div>
 
-                        <div class="cabinet__packages--item top">
+                        <div class="cabinet__packages&#45;&#45;item top">
 
                             <h3>PRO</h3>
 
@@ -291,7 +300,7 @@
 
                         </div>
 
-                    </div>
+                    </div>-->
 
                 </div>
 
