@@ -1,17 +1,17 @@
 $(document).ready(function () {
 
     //////ФИЛЬТР ПОИСКА ОБЪЯВЛЕНИЙ
-    $('.region').click(function (event) {
-        var RegionList = $(this).next('.region-list');
-        if ($('.city-list').is(':visible')) {
-            $('.city-list').hide('slow');  
+    $('.region').click(function (event) {//при клике на элемент с классом "регион"
+        var RegionList = $(this).next('.region-list');//находим ближайший список регионов
+        if (RegionList.is(':visible')) {//при видимости списка регионов
+            $('.city-list').hide('slow');//мы скрываем все элементы с нужным классом
         }
-        RegionList.slideToggle();       
+        RegionList.slideToggle();//показываем нужный нам список       
         return false;
     });
-    $('.russia').click(function (event) {
-        var RussiaList = $(this).next('.russia-list');
-        RussiaList.slideToggle();
+    $('.russia').click(function (event) {//при клике на элемент с классом "Россия"
+        var RussiaList = $(this).next('.russia-list');//находим ближайший список регионов
+        RussiaList.slideToggle();//показываем его 
         return false;
     });
 
@@ -24,7 +24,6 @@ $(document).ready(function () {
             CityList.slideToggle();
         }
     });
-
 
     /*$('.republic').on('click', function (event) {
         $('.city').css({display: "inline-block"});
@@ -58,17 +57,19 @@ $(document).ready(function () {
 
     /*$(document).on('click', '.selectRegion', function(){*/
     $('.selectRegion').click(function () {
-        /*var City = $(this).parent('.russia-list').parent().html;*/
-        /*var CityList = $(this).parent().prev('.city').find('.city-list');*/
-        var regionId = $(this).attr('reg-id');
-        var regionName = $(this).text();
-        /*console.log( City );*/
+        var City = $(this).closest('.region-list').next('.city'),
+            CityList = $(this).closest('.region-list').next('.city').find('.city-list'),
+            regionId = $(this).attr('reg-id');
+            regionName = $(this).text();
+        console.log( City );
         $("input[name='cityFilter']").val('');
         $('.textSelectCity').text('Выберите город');
         $('.textSelectRegion').text(regionName);
         $('input[name="regionFilter"]').val(regionId);
-        $('.city').css({display: "inline-block"});
-        $('.city-list').slideToggle();
+        City.css({display: "inline-block"});
+        CityList.slideToggle();
+        // $('.city').css({display: "inline-block"});
+        // $('.city-list').slideToggle();
         $('.region-list').css({display: "none"});
         /*$.ajax({
             type: 'POST',
