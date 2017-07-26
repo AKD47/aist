@@ -11,6 +11,214 @@
     border-radius: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
+    &--from{
+      display: block;
+      position: relative;
+      float: left;
+      width: 50%;
+      > .input-search{
+        display: inline-block;
+        width: 30%;
+        float: left;
+        height: 29px;
+        background-color: #fff;
+        border: none;
+        padding-left: 20px;
+        z-index: 1;
+        position: relative;
+        outline: none;
+        border-radius: 50%;
+      }
+      > .region, .city {
+        display: inline-block;
+        float: none;
+        position: relative;
+        //width: 30%;
+        cursor: pointer;
+        font-size: 14px;
+        color: #334a51;
+        font-family: $RobotoRegular;
+        @include box-sizing(border-box);
+        margin-right: 0;
+        margin-top: 3px;
+        > .location-mark{
+          background-size: contain;
+          background-image: url('../img/icons/map-marker-icon.png');
+          width: 18px;
+          height: 18px;
+          display: inline-block;
+          background-repeat: no-repeat;
+          position: relative;
+          top: 4px;
+        }
+        > .hotel-icon{
+          background-size: contain;
+          background-image: url('../img/icons/map-marker-icon.png');
+          width: 18px;
+          height: 18px;
+          display: inline-block;
+          background-repeat: no-repeat;
+          position: relative;
+          top: 4px;
+        }
+      }
+      > .city{
+        display: none;
+      }
+      > .city-list, .region-list, .russia-list {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 40px;
+        right: 0;
+        z-index: 3;
+        background-color: #fff;
+        padding: 10px;
+        @include box-sizing(border-box);
+        text-align: center;
+        border: 1px solid #334a51;
+        > span{
+          min-width: 30%;
+          padding: 0 10px;
+          @include box-sizing(border-box);
+          font-family: $RobotoBold;
+          font-size: 13px;
+          color: #334a51;
+          text-align: left;
+          cursor: pointer;
+        }
+      }
+      > .city-list, .russia-list {
+        left: -1px;
+        border-radius: 0 0 15px 15px;
+        top: 40px;
+        cursor: none;
+      }
+      > .city-list ul, .region-list ul, .russia-list ul {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        column-count: 4;
+        column-width: 20%;
+        column-gap: 10px;
+        > .republic{
+          width: 95%;
+          display: inline-block;
+          color: #334a51;
+          font-family: $RobotoRegular;
+          font-size: 13px;
+          cursor: pointer;
+          @include box-sizing(border-box);
+          min-width: 30%;
+          padding: 0 10px;
+          text-align: left;
+        }
+      }
+    }
+    &--to{
+      display: block;
+      position: relative;
+      float: left;
+      width: 40%;
+      > .input-search{
+        display: inline-block;
+        width: 30%;
+        float: left;
+        height: 29px;
+        background-color: #fff;
+        border: none;
+        padding-left: 20px;
+        z-index: 1;
+        position: relative;
+        outline: none;
+        border-radius: 50%;
+      }
+      > .region, .city {
+        display: inline-block;
+        float: none;
+        position: relative;
+        /*width: 30%;*/
+        cursor: pointer;
+        font-size: 14px;
+        color: #334a51;
+        font-family: $RobotoRegular;
+        @include box-sizing(border-box);
+        margin-right: 0;
+        margin-top: 3px;
+        > .location-mark{
+          background-size: contain;
+          background-image: url('../img/icons/map-marker-icon.png');
+          width: 18px;
+          height: 18px;
+          display: inline-block;
+          background-repeat: no-repeat;
+          position: relative;
+          top: 4px;
+        }
+        > .hotel-icon{
+          background-size: contain;
+          background-image: url('../img/icons/map-marker-icon.png');
+          width: 18px;
+          height: 18px;
+          display: inline-block;
+          background-repeat: no-repeat;
+          position: relative;
+          top: 4px;
+        }
+      }
+      > .city{
+        display: none;
+      }
+      > .city-list, .region-list, .russia-list {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 40px;
+        right: 0;
+        z-index: 3;
+        background-color: #fff;
+        padding: 10px;
+        @include box-sizing(border-box);
+        text-align: center;
+        border: 1px solid #334a51;
+        > span{
+          min-width: 30%;
+          padding: 0 10px;
+          @include box-sizing(border-box);
+          font-family: $RobotoBold;
+          font-size: 13px;
+          color: #334a51;
+          text-align: left;
+          cursor: pointer;
+        }
+      }
+      > .city-list, .russia-list {
+        left: -1px;
+        border-radius: 0 0 15px 15px;
+        top: 40px;
+        cursor: none;
+      }
+      > .city-list ul, .region-list ul, .russia-list ul {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        column-count: 4;
+        column-width: 20%;
+        column-gap: 10px;
+        > .republic{
+          width: 95%;
+          display: inline-block;
+          color: #334a51;
+          font-family: $RobotoRegular;
+          font-size: 13px;
+          cursor: pointer;
+          @include box-sizing(border-box);
+          min-width: 30%;
+          padding: 0 10px;
+          text-align: left;
+        }
+      }
+    }
     @include breakpoint(max-width 670px){
       height: 100%;
       margin-bottom: 10px;

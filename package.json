@@ -25,6 +25,7 @@
     "gulp.spritesmith": "^6.4.0",
     "imagemin-pngquant": "^5.0.0",
     "node-bourbon": "^4.2.8",
+    "node-sass": "^4.5.3",
     "postcss-assets": "^4.1.0",
     "postcss-fixes": "^1.4.2",
     "postcss-focus": "^1.0.0",
