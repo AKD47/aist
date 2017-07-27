@@ -54,17 +54,16 @@ $(document).ready(function () {
         console.log('body');
     });*/
 
-
-    /*$(document).on('click', '.selectRegion', function(){*/
-    $('.selectRegion').click(function () {
-        var City = $(this).closest('.region-list').next('.city'),
-            CityList = $(this).closest('.region-list').next('.city').find('.city-list'),
-            regionId = $(this).attr('reg-id');
-            regionName = $(this).text();
-        console.log( City );
+    ///выбор места, откуда едет посылка
+    $('.selectRegionFrom').click(function () {
+        var City = $(this).closest('.region-list').next('.cityFrom'),
+            CityList = $(this).closest('.region-list').next('.cityFrom').find('.city-list'),
+            regionId = $(this).attr('reg-id'),
+            regionName = $(this).text();           
+        
         $("input[name='cityFilter']").val('');
-        $('.textSelectCity').text('Выберите город');
-        $('.textSelectRegion').text(regionName);
+        $('.textSelectCityFrom').text('Выберите город');
+        $('.textSelectRegionFrom').text(regionName);
         $('input[name="regionFilter"]').val(regionId);
         City.css({display: "inline-block"});
         CityList.slideToggle();
@@ -85,19 +84,63 @@ $(document).ready(function () {
         return false;
     });
 
-    $(document).on('click', '.selectCity', function () {
+    $(document).on('click', '.selectCityFrom', function () {
         var idCity = $(this).attr('city-id');
         console.log(idCity);
         var nameCity = $(this).text();
         $("input[name='cityFilter']").val(idCity);
-        $('.textSelectCity').text(nameCity);
+        $('.textSelectCityFrom').text(nameCity);
         console.log('city');
 
-        $('.city').css({display: "inline-block"});
+        $('.cityFrom').css({display: "inline-block"});
         //$('.city-list').slideToggle();
         $('.region-list').css({display: "none"});
         return false;
     });
+    ///конец
 
+    ///выбор места, куда едет посылка
+    $('.selectRegionTo').click(function () {
+        var City = $(this).closest('.region-list').next('.cityTo'),
+            CityList = $(this).closest('.region-list').next('.cityTo').find('.city-list'),
+            regionId = $(this).attr('reg-id'),
+            regionName = $(this).text();            
+       
+        $("input[name='cityFilter']").val('');
+        $('.textSelectCityTo').text('Выберите город');
+        $('.textSelectRegionTo').text(regionName);
+        $('input[name="regionFilter"]').val(regionId);
+        City.css({display: "inline-block"});
+        CityList.slideToggle();
+        // $('.city').css({display: "inline-block"});
+        // $('.city-list').slideToggle();
+        $('.region-list').css({display: "none"});
+        /*$.ajax({
+         type: 'POST',
+         url: "/site/show_city_list",
+         data: 'id=' + regionId,
+         success: function (data) {
+         $('.city-list').html(data);
+         $('.city').css({display: "inline-block"});
+         $('.city-list').slideToggle();
+         $('.region-list').css({display: "none"});
+         }
+         });*/
+        return false;
+    });
+
+    $(document).on('click', '.selectCityTo', function () {
+        var idCity = $(this).attr('city-id');
+        console.log(idCity);
+        var nameCity = $(this).text();
+        $("input[name='cityFilter']").val(idCity);
+        $('.textSelectCityTo').text(nameCity);
+        console.log('city');
+        $('.cityTo').css({display: "inline-block"});
+        //$('.city-list').slideToggle();
+        $('.region-list').css({display: "none"});
+        return false;
+    });
+    ///конец
 
 });
